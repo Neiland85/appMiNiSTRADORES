@@ -7,22 +7,48 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '14'
-    - run: npm install
-    - name: Run Node.js security audit
-      run: npm audit --audit-level=high
-    - run: npm test
+
+    - name: Install dependencies and run audit in backend
+      run: |
+        cd backend
+        npm install
+        npm audit --audit-level=high
+
+    - name: Run tests in backend
+      run: |
+        cd backend
+        npm test
+
+    - name: Install dependencies and run audit in frontend
+      run: |
+        cd frontend
+        npm install
+        npm audit --audit-level=high
+
+    - name: Run tests in frontend
+      run: |
+        cd frontend
+        npm test
 
   cleanup:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Remove unnecessary files
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Clean up Node.js
       run: |
+        cd backend
+        rm -rf node_modules
+        npm cache clean --force
+        cd ../frontend
         rm -rf node_modules
         npm cache clean --force
