@@ -1,4 +1,5 @@
-{
+{ -name: Attest Build Provenance
+  uses: actions/attest-build-provenance@v1.3.3
   "name": "frontend",
   "version": "1.0.0",
   "description": "Frontend del proyecto de administración de fincas",
