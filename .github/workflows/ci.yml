@@ -1,64 +1,26 @@
-name: CI/CD
-
-on: [push, pull_request]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-
-    - name: Install dependencies and run audit in backend
-      run: |
-        cd backend
-        if [ -f package.json ]; then
-          npm install
-          npm audit --audit-level=high
-        else
-          echo "package.json not found in backend"
-          exit 1
-        fi
-
-    - name: Run tests in backend
-      run: |
-        cd backend
-        npm test
-
-    - name: Install dependencies and run audit in frontend
-      run: |
-        cd frontend
-        if [ -f package.json ]; then
-          npm install
-          npm audit --audit-level=high
-        else
-          echo "package.json not found in frontend"
-          exit 1
-        fi
-
-    - name: Run tests in frontend
-      run: |
-        cd frontend
-        npm test
-
-  cleanup:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Clean up Node.js
-      run: |
-        cd backend
-        rm -rf node_modules
-        npm cache clean --force
-        cd ../frontend
-        rm -rf node_modules
-        npm cache clean --force
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend del proyecto de administración de fincas",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.2.3",
+    "tailwindcss": "^2.1.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Neiland85/appMiNiSTRADORES.git"
+  }
+}
