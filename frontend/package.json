@@ -14,13 +14,14 @@
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.3",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.1.2",
+    "braces": "^3.0.3"
   },
   "devDependencies": {
     "jest": "^29.7.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Neiland85/appMiNiSTRADORES.git"
+    "url": "https://github.com/tu_usuario/appMiNiSTRADORES.git"
   }
 }
