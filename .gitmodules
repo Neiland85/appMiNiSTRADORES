@@ -1,0 +1,5 @@
+[submodule "path/to/submodule"]
+    path = path/to/submodule
+    url = https://github.com/Neiland85/appMiNiSTRADORES.git
+
+
