@@ -18,8 +18,13 @@ jobs:
     - name: Install dependencies and run audit in backend
       run: |
         cd backend
-        npm install
-        npm audit --audit-level=high
+        if [ -f package.json ]; then
+          npm install
+          npm audit --audit-level=high
+        else
+          echo "package.json not found in backend"
+          exit 1
+        fi
 
     - name: Run tests in backend
       run: |
@@ -29,8 +34,13 @@ jobs:
     - name: Install dependencies and run audit in frontend
       run: |
         cd frontend
-        npm install
-        npm audit --audit-level=high
+        if [ -f package.json ]; then
+          npm install
+          npm audit --audit-level=high
+        else
+          echo "package.json not found in frontend"
+          exit 1
+        fi
 
     - name: Run tests in frontend
       run: |
