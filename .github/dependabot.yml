@@ -1,0 +1,11 @@
+echo "version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+  - package-ecosystem: 'pip'
+    directory: '/backend'
+    schedule:
+      interval: 'daily'
+" > .github/dependabot.yml
