@@ -5,7 +5,8 @@ appMiNiSTRADORES/
 │   ├── Dockerfile
 │   ├── package.json
 │   ├── README.md
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── .github/dependabot.yml
 ├── frontend/
 │   ├── public/
 │   ├── src/
