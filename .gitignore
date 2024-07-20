@@ -27,3 +27,11 @@ __MACOSX
 .Spotlight-V100
 .Trashes
 
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Node
+node_modules/
