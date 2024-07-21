@@ -106,15 +106,15 @@ AppMiNiSTRADORES es una solución integral para la gestión de fincas, ofreciend
     npm start
     ```
 
-##### Contribuciones
+#### Contribuciones
 
 Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request para discutir cualquier cambio importante.
 
-####### Licencia
+#### Licencia
 
 MIT License
 
-Copyright (c) 2024 Neiland 
+Copyright (c) 2024                                                   Neiland 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
