@@ -1,5 +1,5 @@
 Flask==3.0.3
-Flask-RESTful==0.3.8
+Flask-RESTful==0.3.10
 requests==2.25.1
 pytest==8.2.2
 pandas==1.2.4
