@@ -3,7 +3,7 @@ Flask-RESTful==0.3.8
 requests==2.25.1
 pytest==8.2.2
 pandas==1.2.4
-numpy==1.20.2
+numpy==2.0.1
 scikit-learn==1.5.1
 matplotlib==3.9.1
 joblib==1.4.2
